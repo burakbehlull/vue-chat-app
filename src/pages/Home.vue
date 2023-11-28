@@ -14,6 +14,10 @@
     <div>
         <h1>Home Page</h1>
         <h2> {{ merhaba }} </h2>
+
+
+        <button @click="$router.push('/login')">Giriş Yap</button>
+        <button @click="$router.push('/signup')">Kaydol</button>
     </div>
 </template>
 
