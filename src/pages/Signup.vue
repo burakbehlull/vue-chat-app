@@ -5,13 +5,14 @@
         <input type="email" placeholder="E-Mail" v-model="email" required />
         <input type="password" placeholder="Password Here" v-model="password" required />
         <p>{{ error }}</p>
-        <button>Kaydol</button>
+        <button>Gönder</button>
     </form>
 
 </template>
 
 <script>
 import {ref} from 'vue'
+import {useRouter} from 'vue-router'
 import {signUp, error} from '../composables/useSignup'
 export default {
     name: 'Signup',
@@ -19,10 +20,14 @@ export default {
         const displayName = ref('')
         const email = ref('')
         const password = ref('')
+        const router = useRouter()
 
         const handleSubmit = async () => {
             console.log(displayName.value, email.value, password.value)
             await signUp(email.value, password.value, displayName.value)
+            if(!error.value) {
+                router.push('/')
+            }
             
         }
 
