@@ -16,3 +16,12 @@
         <h2> {{ merhaba }} </h2>
     </div>
 </template>
+
+<style lang="scss">
+    $hello: red;
+    
+    h1{
+        background-color: $hello;
+    }
+  
+</style>
