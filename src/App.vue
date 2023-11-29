@@ -7,6 +7,9 @@ import Navbar from './components/_Navbar.vue'
     <router-view></router-view>
 </template>
 
-<style scoped>
-
+<style lang="scss">
+    //Global Styles
+    * {
+        box-sizing: border-box;
+    }
 </style>

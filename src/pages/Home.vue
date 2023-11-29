@@ -18,10 +18,5 @@
 </template>
 
 <style lang="scss">
-    $hello: red;
-    
-    h1{
-        background-color: $hello;
-    }
-  
+
 </style>

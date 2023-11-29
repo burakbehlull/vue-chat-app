@@ -1,6 +1,7 @@
 <template>
     <nav>
         <button @click="$router.push('/')">Anasayfa</button>
+        <button @click="$router.push('/chatroom')">Chat Room</button>
         <button @click="$router.push('/login')">Giriş Yap</button>
         <button @click="$router.push('/signup')">Kaydol</button>
         <button @click="handleSubmit">Çıkış Yap</button>
