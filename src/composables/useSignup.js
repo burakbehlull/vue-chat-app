@@ -1,9 +1,9 @@
 import { ref } from 'vue'
 import { auth } from '../config/firebase'
-import {createUserWithEmailAndPassword, updateProfile} from 'firebase/auth'
+import {createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 
 const error = ref(null)
-const signUp = async (email, password, displayName) => {
+const signUp = async (email, password, dN) => {
     error.value = null
     try {
         const res = await createUserWithEmailAndPassword(auth, email, password)
@@ -11,7 +11,9 @@ const signUp = async (email, password, displayName) => {
         if (!res) {
             throw new Error('Giriş yapılmadı!')
         }
-        await updateProfile({ displayName })
+        await updateProfile(auth.currentUser, {
+            displayName: dN
+        })
         error.value = null
         return res
     } catch (err) {

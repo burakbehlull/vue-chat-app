@@ -3,7 +3,7 @@
 import { ref } from 'vue'
 
 import { auth } from '../config/firebase'
-import {signInWithEmailAndPassword} from 'firebase/auth'
+import { signInWithEmailAndPassword } from 'firebase/auth'
 const error = ref(null)
 const useLogin = async (email, password) => {
     error.value = null

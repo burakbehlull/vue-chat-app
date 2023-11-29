@@ -24,7 +24,7 @@ export default {
             console.log(email.value, password.value)
             await useLogin(email.value, password.value)
             if(!error.value) {
-                router.push('/')
+                // router.push('/')
             }
 
             
