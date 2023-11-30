@@ -2,7 +2,7 @@
     <h1>Chat Room</h1>
 
     <form>
-
+        <ChatWindow />
         <textarea 
         placeholder="message"
         v-model="message"
@@ -20,16 +20,22 @@
 
 <script>
 import { watch, ref } from 'vue';
+
+import ChatWindow from './ChatWindow.vue';
+
 import { useRoute } from 'vue-router';
 import getUser from '../composables/getUser'
 import { Timestamp } from 'firebase/firestore';
 import useCollections from '../composables/useCollections'
 export default {
     name: 'Chatroom',
+    components: {
+        ChatWindow
+    },
     setup() {
         const {user} = getUser()
         const router = useRoute()
-        const {add, error} = useCollections('chat')
+        const {add, error} = useCollections()
 
         const message = ref('')
 

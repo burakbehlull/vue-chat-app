@@ -5,7 +5,7 @@ const useCollections = () => {
     const error = ref(null)
     const add = async (doc) => {
         error.value = null
-        const col = collection(db, 'chatroom')
+        const col = collection(db, 'messages')
         try {
             await addDoc(col, doc)
         } catch (err) {
