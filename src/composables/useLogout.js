@@ -8,7 +8,6 @@ const useLogout = async () => {
     error.value = null
     try {
          const res = await signOut(auth)
-         console.log(res)
          return res
     } catch (err) {
         error.value = err.message

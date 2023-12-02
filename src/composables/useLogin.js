@@ -10,10 +10,8 @@ const useLogin = async (email, password) => {
     try {
         const res = await signInWithEmailAndPassword(auth, email, password)
         error.value = null
-        console.log(res)
         return res
     } catch (err) {
-        console.log(err.message)
         error.value = err.message
     }
 }

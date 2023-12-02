@@ -9,7 +9,6 @@ const useCollections = () => {
         try {
             await addDoc(col, doc)
         } catch (err) {
-            console.log(err.message)
             error.value = 'could not send the message'
         }
     }

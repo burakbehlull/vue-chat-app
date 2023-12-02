@@ -12,12 +12,32 @@
 </template>
 
 <script>
+import { computed, ref, onUpdated } from 'vue'
 import getCollection from '../composables/getCollection'
+import {formatDistanceToNow} from 'date-fns'
 const {documents, error} = getCollection()
 export default {
     setup() {
+		/*
+        const formatedDocuments = computed(()=>{
+            if(documents.value) {
+                return documents.value.map(doc => {
+                    let time = formatDistanceToNow(doc.createdAt.toDate())
+                    return {...doc, createdAt: time}
+                })
+            }
+        
+        })
+		*/
+		
+		const messages = ref(null)
+		/*
+		onUpdated(()=> {
+		messages.value.scrollTop = messages.value.scrollHeight
+		})
+		*/
         return {
-            documents, error
+            documents, error, documents
         }
     }
 }
