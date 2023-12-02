@@ -11,6 +11,10 @@
     }
     nav button:hover {
         @apply text-white bg-red-600 transition duration-500 ease-in-out;
-
     }
+
+    section {
+        @apply flex flex-col items-center justify-center pt-7;
+    }
+    
 }

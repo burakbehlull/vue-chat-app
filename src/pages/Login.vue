@@ -1,12 +1,17 @@
 <template>
 
-    <form @submit.prevent="handleSubmit">
+    <section>
+        <form @submit.prevent="handleSubmit">
         <input type="email" placeholder="E-Mail" v-model="email" required />
         <input type="password" placeholder="Password Here" v-model="password" required />
 
-        <button>Gönder</button>
-    </form>
+        <div v-if="error">
+            {{ error }}
+        </div>
 
+        <button>Gönder</button>
+        </form>
+    </section>
 </template>
 
 <script>

@@ -1,12 +1,19 @@
 <template>
 
-    <form @submit.prevent="handleSubmit">
-        <input type="text" placeholder="Display Name" v-model="displayName" required />
-        <input type="email" placeholder="E-Mail" v-model="email" required />
-        <input type="password" placeholder="Password Here" v-model="password" required />
-        <p>{{ error }}</p>
-        <button>Gönder</button>
-    </form>
+    <section>
+        <form @submit.prevent="handleSubmit">
+            <input type="text" placeholder="Display Name" v-model="displayName" required />
+            <input type="email" placeholder="E-Mail" v-model="email" required />
+            <input type="password" placeholder="Password Here" v-model="password" required />
+
+            <div v-if="error">
+                {{ error }}
+            </div>
+            
+            <button>Gönder</button>
+
+        </form>
+    </section>
 
 </template>
 

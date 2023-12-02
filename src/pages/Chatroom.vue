@@ -1,21 +1,23 @@
 <template>
-    <h1>Chat Room</h1>
+    <section>
+        <h1>Chat Room</h1>
 
-    <form>
-        <ChatWindow />
-        <textarea 
-        placeholder="message"
-        v-model="message"
-        @keypress.enter.prevent="handleSubmit"
-        required
-        ></textarea>
+        <form>
+            <ChatWindow />
+            <textarea 
+            placeholder="message"
+            v-model="message"
+            @keypress.enter.prevent="handleSubmit"
+            required
+            ></textarea>
 
-    </form>
+        </form>
 
 
-    <div v-if="error">
-        {{ error }}
-    </div>
+        <div v-if="error">
+            {{ error }}
+        </div>
+    </section>
 </template>
 
 <script>

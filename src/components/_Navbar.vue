@@ -1,12 +1,12 @@
 <template>
-    <nav class="flex flex-col gap-5 max-w-lg text-center sm:flex-row">
+    <nav class="flex flex-col gap-5 text-center sm:flex-row">
         <h1 class="text-2xl sm:text-4xl text-rose-600 sm:pr-3 pr-0"> CHAT APP </h1>
         <button @click="$router.push('/')">Anasayfa</button>
         <button @click="$router.push('/chatroom')" v-if="isAuth">Chat Room</button>
         <button @click="$router.push('/login')" v-if="isAuth==false">Giriş Yap</button>
         <button @click="$router.push('/signup')" v-if="isAuth==false">Kaydol</button>
         <button @click="handleSubmit" v-if="isAuth">Çıkış Yap</button>
-        <span v-if="isAuth"> {{ user.displayName }} </span>
+        <span v-if="isAuth"> display name: {{ user.displayName }} </span>
     </nav>
 </template>
 
