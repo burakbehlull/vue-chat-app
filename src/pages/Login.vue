@@ -1,15 +1,15 @@
 <template>
 
     <section>
+		<h1 class="text-red-500 text-2xl m-2 sm:text-4xl sm:m-4">Login Page</h1>
         <form @submit.prevent="handleSubmit">
-        <input type="email" placeholder="E-Mail" v-model="email" required />
-        <input type="password" placeholder="Password Here" v-model="password" required />
+			<input type="email" placeholder="E-Mail" v-model="email" required />
+			<input type="password" placeholder="Password Here" v-model="password" required />
+			<div v-if="error">
+				{{ error }}
+			</div>
 
-        <div v-if="error">
-            {{ error }}
-        </div>
-
-        <button>Gönder</button>
+			<button>Gönder</button>
         </form>
     </section>
 </template>

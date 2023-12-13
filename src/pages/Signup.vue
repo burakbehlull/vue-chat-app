@@ -1,6 +1,7 @@
 <template>
 
     <section>
+		<h1 class="text-red-500 text-2xl m-2 sm:text-4xl sm:m-4">Signup Page</h1>
         <form @submit.prevent="handleSubmit">
             <input type="text" placeholder="Display Name" v-model="displayName" required />
             <input type="email" placeholder="E-Mail" v-model="email" required />

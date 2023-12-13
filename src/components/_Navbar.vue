@@ -6,7 +6,7 @@
         <button @click="$router.push('/login')" v-if="isAuth==false">Giriş Yap</button>
         <button @click="$router.push('/signup')" v-if="isAuth==false">Kaydol</button>
         <button @click="handleSubmit" v-if="isAuth">Çıkış Yap</button>
-        <span v-if="isAuth"> display name: {{ user.displayName }} </span>
+        <span v-if="isAuth" class="text-red-600"> display name: {{ user.displayName }} </span>
     </nav>
 </template>
 

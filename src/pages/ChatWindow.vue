@@ -1,11 +1,10 @@
 <template>
     <div class="chat-window">
         <p v-if="error">{{ error }}</p>
-        <div v-if="documents">
-            <div v-for="doc in documents" :key="doc.id">
-                <h2>{{ doc.name }}</h2>
-                <h3>{{ doc.message }}</h3>
-                <h4>{{ doc.createdAt.toDate() }}</h4>
+        <div v-if="documents" class="max-w-[80vw] max-h-[40vh] overflow-auto">
+            <div v-for="doc in documents" :key="doc.id" class="border border-zinc-200 m-2 p-2 rounded-t">
+                <h3 class="tracking-wide text-zinc-600"><span class="text-black text-xl text-semibold text-center">{{ doc.name }}: </span>{{ doc.message }}</h3>
+                <h4 class="text-xs pt-2">{{ doc.createdAt.toDate() }}</h4>
             </div>
         </div>
     </div>

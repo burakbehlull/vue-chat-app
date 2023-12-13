@@ -1,12 +1,13 @@
 <template>
     <section>
-        <h1>Chat Room</h1>
+        <h1 class="text-red-500 text-2xl m-2 sm:text-4xl sm:m-4">Chat Room</h1>
 
-        <form>
+        <form class="max-w-[80vw] pt-3">
             <ChatWindow />
-            <textarea 
+            <textarea class="resize-none max-w-[75vw]"			
             placeholder="message"
             v-model="message"
+			rows="4" cols="50"
             @keypress.enter.prevent="handleSubmit"
             required
             ></textarea>

@@ -4,7 +4,7 @@
         name: 'Home',
         setup() {
             return {
-                merhaba: "Chat-App Project"
+                burakbehlull: "Welcome to a full-time chat-app project."
             }
         }
     })
@@ -12,8 +12,7 @@
 
 <template>
     <div>
-        <h1>Home Page</h1>
-        <h2> {{ merhaba }} </h2>
+        <h2 class="p-3 text-2x1 tracking-tighter"> {{ burakbehlull }} <a href="https://github.com/burakbehlull/vue-chat-app" target="_blank" class="underline decoration-rose-300">Github..</a></h2>
     </div>
 </template>
 
